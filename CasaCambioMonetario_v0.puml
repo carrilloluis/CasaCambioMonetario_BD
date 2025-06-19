@@ -1,0 +1,18 @@
+@startuml t1
+	hide circle
+	skin rose
+	hide empty members
+	entity AbreviaturaMonetaria {
+		*id : CHAR
+		area_geográfica : VARCHAR
+		símbolo : CHAR
+	}
+	entity FluctuaciónMonetaria {
+		*id : INTEGER
+		fecha_registro : DATETIME
+		moneda : CHAR
+		tasa_cambio : FLOAT
+		observaciones : TEXT
+	}
+	AbreviaturaMonetaria ||-d-o{ FluctuaciónMonetaria
+@enduml
